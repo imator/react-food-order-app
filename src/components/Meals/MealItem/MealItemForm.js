@@ -10,12 +10,12 @@ const MealItemForm = (props) => {
     event.preventDefault();
     //enteredAmount is string
     const enteredAmount = amountInputRef.current.value;
-    const enetedAmontNumber = +enteredAmount;
-    if (enteredAmount.trim().length === 0 || enetedAmontNumber < 1 || enteredAmount > 5) {
+    const enteredAmontNumber = +enteredAmount;
+    if (enteredAmount.trim().length === 0 || enteredAmontNumber < 1 || enteredAmount > 5) {
       setAmountIsValid(false);
       return;
     }
-    props.onAddToChart(enetedAmontNumber);
+    props.onAddToChart(enteredAmontNumber);
   };
 
   return (
